@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:violet;
+            }
+
+            .first-face, .second-face, .third-face, .four-face, .five-face, .six-face{
+                width: 104px;
+                height: 104px;
+                background-color:lime;
+                border-radius: 10%;
+                padding: 4px;
+                margin: 16px;
+                box-shadow: 0 5px #fff inset,
+                            0 -5px #bbb inset,
+                            5px 0 #d7d7d7 inset,
+                            -5px 0 #d7d7d7 inset;
+            }
+
+            .first-face {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .second-face {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .third-face {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .four-face {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+            .four-face1 {
+                flex-basis: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .five-face {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+            .five-face1 {
+                flex-basis: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .five-face2 {
+                flex-basis: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .six-face {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+            .six-face1 {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+
+            .second-face span:nth-of-type(2){
+                align-self: flex-end;
+            }
+
+            .third-face span:nth-of-type(2){
+                align-self: center;
+            }
+
+            .third-face span:nth-of-type(3){
+                align-self: flex-end;
+            }
+
+            .dot{
+                display: block;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background-color:crimson;
+                box-shadow: 0 3px #111 inset,
+                            0 -3px #555 inset;
+                margin: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 数字1 -->
+        <div class="first-face">
+            <span class="dot"></span>
+        </div>
+        <!-- 数字2 -->
+        <div class="second-face">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <!-- 数字3 -->
+        <div class="third-face">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <!-- 数字4 -->
+        <div class="four-face">
+            <div class="four-face1">
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="four-face1">
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <!-- 数字5 -->
+        <div class="five-face">
+            <div class="five-face1">
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="five-face2">
+                <span class="dot"></span>
+            </div>
+            <div class="five-face1">
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <!-- 数字6 -->
+        <div class="six-face">
+            <div class="six-face1">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="six-face1">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </body>
+</html>
