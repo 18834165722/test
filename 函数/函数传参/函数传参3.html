@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeDiv('background','pink')">颜色背景为粉色</button>
+    <button onclick="changeDiv('width','100px')">变宽100px</button>
+    <button onclick="changeDiv('height','400px')">变高400px</button>
+    <button onclick="changeDiv('fontSize','60px')">变字体大小为60px</button>
+    <button onclick="changeDiv('color','blue')">变文本字体为蓝色</button>
+    <div class="box" id="box">哈哈</div>
+    <script>
+        function changeDiv(name,value) {
+            document.getElementById('box')["style"][name] = value
+        }
+    </script>
+</body>
+</html>

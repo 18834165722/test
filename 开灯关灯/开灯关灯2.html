@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .night {
+            background: yellow;
+            color: red;
+        }
+
+        .day{
+            background:lightpink;
+            color:lime;
+        }
+    </style>
+</head>
+<body class="night">
+    <button id="btn"><font size="6">吹牛逼/撩骚</font></button>
+    <p><font size="4">634的兄弟们会啥？</font></p>
+    <script>
+        // 获取button元素对象，并赋值给变量oBtn
+        var oBtn = document.getElementById('btn')
+
+        // 获取body元素对象，直接通过document.body，并赋值给变量oBody
+        var oBody = document.body
+
+        // 给button元素绑定鼠标点击事件
+        oBtn.onclick = function() {
+            console.log(oBody.className)
+            if (oBody.className == "night") {
+                oBody.className = "day"
+            } else {
+                oBody.className = "night"
+            }
+        }
+
+    </script>
+</body>
+</html>
