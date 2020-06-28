@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var person1 = {
+            name: "jayjun",
+            age: 18,
+            sex: "男",
+            say: function(){
+                console.log("我叫" + this.name + ",今年" + this.age + "岁。")
+            },
+            eat: function(){
+                console.log(this.name + "正在吃饭。")
+            }
+        }
+
+        console.log(person1.name)
+
+        person1.say()
+        person1.eat()
+        
+    </script>
+</body>
+</html>

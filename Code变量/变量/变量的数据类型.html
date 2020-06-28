@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a;
+        console.log(typeof a); // undefined 变量只声明了，但未赋值
+
+        console.log(typeof b); // undefined 变量未声明
+
+        a = "hh"; 
+        console.log(typeof a); // String
+
+        a = 18; 
+        console.log(typeof a); // Number
+
+        a = 3.1415926;
+        console.log(typeof a); // Number
+
+        a = "18";
+        console.log(typeof a); // String
+
+        a = [1, 2, 3];
+        console.log(typeof a); // Object
+
+        a = function(){
+
+        }
+        console.log(typeof a); // Function
+
+        a = { name: 'hh', age: 18 }
+
+        console.log(typeof a); // Object
+
+        a = null;
+
+        console.log(typeof a); // Object
+
+        a = "null";
+
+        console.log(typeof a); // String
+
+        a = true
+
+        console.log(typeof a); // Boolean
+
+        a = false 
+
+        console.log(typeof a); // Boolean
+
+        a = "false" 
+
+        console.log(typeof a); //String
+
+    </script>
+</body>
+</html>

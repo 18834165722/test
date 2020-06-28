@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 需求： 定义一个json存储多个学生的个人信息：姓名、年龄、家乡等
+
+        var aStudent = [
+            {"name": "卫俊国", "age": 18, "city": "忻州"}, 
+            {"name": "张礼军", "age": 28, "city": "安庆"},
+            {"name": "韩尙昆", "age": 18, "city": "长治"}
+        ]
+
+        console.log(aStudent, aStudent[2].name)
+
+        for (var i = 0; i < aStudent.length; i++) {
+            console.log(aStudent[i].name, aStudent[i].age, aStudent[i].city)
+        }
+    </script>
+</body>
+</html>

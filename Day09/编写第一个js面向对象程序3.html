@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 构造函数
+        function createPerson (name, age) {
+
+            var obj = new Object() // 创建一个空白对象
+
+            obj.name = name
+
+            obj.age = age
+
+            obj.say = function() {
+                console.log("我叫" + this.name + "，今年" + this.age + "岁。")
+            }
+
+            obj.eat = function() {
+                console.log(this.name + "正在吃饭。")
+            }
+
+            return obj
+        }
+
+        var p1 = createPerson('jayjun', 18)
+
+        p1.say()
+
+        p1.eat()
+
+
+        var p2 = createPerson('jaychou', 28)
+
+        p2.say()
+
+        p2.eat()
+
+        var p3 = createPerson('刘德华', 48)
+
+        p3.say()
+
+        p3.eat()
+
+    </script>
+</body>
+</html>

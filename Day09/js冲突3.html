@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 命名空间
+
+        var GLOBAL = {} // 全局变量
+
+        // 成员A
+
+        GLOBAL.A = {}
+
+        GLOBAL.A.name = "jayjun"
+
+        GLOBAL.A.say = function() {
+            console.log(this.name)
+        }
+
+
+    </script> 
+
+    <script>
+
+        // 成员B
+
+        GLOBAL.B = {}
+
+        GLOBAL.B.name = "jaychou"
+
+        GLOBAL.B.say = function() {
+            console.log(this.name)
+        }
+        
+    </script> 
+
+    <script>
+
+        // 成员C
+
+        console.log(GLOBAL.A.name)
+
+        GLOBAL.A.say()
+        GLOBAL.B.say()
+        
+    </script> 
+</body>
+</html>

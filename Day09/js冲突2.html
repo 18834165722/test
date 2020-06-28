@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 成员A
+        (function(){
+            var name1 = "jayjun" // 局部变量
+        })();
+    </script>
+
+    <script>
+        // 成员B
+        (function(){
+            var name1 = "jaychou" // 局部变量
+        })();
+    </script>
+    
+    <script>
+        // 成员C
+        console.log(name1)
+    </script>   
+</body>
+</html>

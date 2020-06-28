@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数组的操作
+
+        var aFruit = ['apple', 'banana', 'orange', 'pear']
+
+        console.log(aFruit)
+
+        aFruit.push('pineapple')//尾部加
+        console.log(aFruit)
+
+        aFruit.unshift('watermelon')//头部加
+        console.log(aFruit)
+
+        aFruit.pop()//尾部删除
+        console.log(aFruit)
+
+        aFruit.pop()
+        console.log(aFruit)
+
+        aFruit.pop()
+        console.log(aFruit)
+
+        aFruit.shift()//头部删除
+        console.log(aFruit)
+
+        // 插入操作
+        /* 
+        删除
+        splice(开始, 长度)
+
+        插入
+        splice(开始, 0, 元素…)
+
+        替换
+        splice(开始n, n, 元素…)
+        */
+
+        aFruit.splice(1, 0, 'orange', 'watermelon')
+        console.log(aFruit)
+
+        aFruit.splice(1, 2)
+        console.log(aFruit)
+
+        aFruit.splice(0, 2, 'orange', 'watermelon')
+        console.log(aFruit)
+    </script>
+</body>
+</html>
