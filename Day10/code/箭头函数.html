@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Person1 = {
+            name: '张三',
+            age: 18,
+            say(){
+                console.log(this); // this指向Person1对象
+                setInterval(function(){
+                    console.log(this) // this指向window对象
+                }, 1000)
+            }
+        }
+
+        // Person1.say();
+
+        let Person2 = {
+            name: '李四',
+            age: 18,
+            say(){
+                // ES5 可以使用闭包来解决
+                console.log(this); // this指向Person2对象
+                let that = this
+                setInterval(function(){
+                    console.log(that.name) // this指向window对象
+                }, 1000)
+            }
+        }
+
+        // Person2.say();
+        
+        
+        // 箭头函数中的this其实是父级作用域中的this
+
+        // 箭头函数的 this 指向的是定义时的 this 对象，而不是执行时的 this 对象
+
+        // 当定义Person3的say()方法的时候，我们再箭头函数编写的this.x，此时的this是指的Person3，所以
+        // this.x指的是Person3.x。而在say()方法被调用的时候，this依然指向的是被定义时候所指向的对象，也
+        // 就是 Person3 对象。
+
+        let Person3 = {
+            name: '王五',
+            age: 28,
+            say(){
+                console.log(this); // this指向Person3对象
+                setInterval(() => {
+                    console.log(this); // this指向Person3对象
+                    console.log(this.name, this.age); 
+                }, 1000)
+            }
+        }
+
+        // Person3.say();
+
+        // 一个常常犯的错误是使用箭头函数来定义对象的方法，下面是应该错误的示范：
+
+        let person4 = {
+            name: '赵六',
+            age: 38,
+            say: () => {
+                console.log(this.name)
+            }
+        }
+
+        person4.say() // 此时箭头函数的this并没有指向Person4对象。这个时候使用箭头函数没有意义！
+    </script>
+</body>
+</html>
